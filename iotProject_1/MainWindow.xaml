@@ -5,8 +5,117 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:iotProject_1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="iotProject_1" Width="AUTO" Height="AUTO"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="AUTO"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="AUTO"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+            </Grid.RowDefinitions>
+            <materialDesign:Card Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Center" VerticalAlignment="Center">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="20"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Column="1" Grid.Row="1" Text="IOT PROJECT _ LED CONTROL PANEL" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                </Grid>
+            </materialDesign:Card>
+            <Grid Grid.Column="1" Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="15"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="15"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="15"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="15"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="1" Grid.Row="1" Text="LED NUMBER ONE" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <Button Grid.Column="3" Grid.Row="1" Content="led 1 onn" x:Name="led_1_onn_btn" Click="Led_1_onn_btn_OnClick" Background="Green" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                <Button Grid.Column="5" Grid.Row="1" Content="led 1 off" x:Name="led_1_off_btn" Click="Led_1_off_btn_OnClick" Background="Red" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+
+                <TextBlock Grid.Column="1" Grid.Row="3" Text="LED NUMBER TWO" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <Button Grid.Column="3" Grid.Row="3" Content="led 2 onn" x:Name="led_2_onn_btn" Click="Led_2_onn_btn_OnClick" Background="Green" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                <Button Grid.Column="5" Grid.Row="3" Content="led 2 off" x:Name="led_2_off_btn" Click="Led_2_off_btn_OnClick" Background="Red" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+
+                <TextBlock Grid.Column="1" Grid.Row="5" Text="LED NUMBER THREE" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <Button Grid.Column="3" Grid.Row="5" Content="led 3 onn" x:Name="led_3_onn_btn" Click="Led_3_onn_btn_OnClick" Background="Green" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                <Button Grid.Column="5" Grid.Row="5" Content="led 3 off" x:Name="led_3_off_btn" Click="Led_3_off_btn_OnClick" Background="Red" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+
+                <TextBlock Grid.Column="1" Grid.Row="7" Text="LED NUMBER FOUR" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <Button Grid.Column="3" Grid.Row="7" Content="led 4 onn" x:Name="led_4_onn_btn" Click="Led_4_onn_btn_OnClick" Background="Green" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                <Button Grid.Column="5" Grid.Row="7" Content="led 4 off" x:Name="led_4_off_btn" Click="Led_4_off_btn_OnClick" Background="Red" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+
+                <TextBlock Grid.Column="1" Grid.Row="9" Text="LED NUMBER FIVE" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <Button Grid.Column="3" Grid.Row="9" Content="led 5 onn" x:Name="led_5_onn_btn" Click="Led_5_onn_btn_OnClick" Background="Green" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                <Button Grid.Column="5" Grid.Row="9" Content="led 5 off" x:Name="led_5_off_btn" Click="Led_5_off_btn_OnClick" Background="Red" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+
+                <TextBlock Grid.Column="1" Grid.Row="11" Text="LED NUMBER SIX" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <Button Grid.Column="3" Grid.Row="11" Content="led 6 onn" x:Name="led_6_onn_btn" Click="Led_6_onn_btn_OnClick" Background="Green" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                <Button Grid.Column="5" Grid.Row="11" Content="led 6 off" x:Name="led_6_off_btn" Click="Led_6_off_btn_OnClick" Background="Red" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+            </Grid>
+            <materialDesign:Card Grid.Column="1" Grid.Row="5" HorizontalContentAlignment="Center" VerticalAlignment="Center">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="20"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <ScrollViewer Grid.Column="1" Grid.Row="1" x:Name="scrl_br" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                        <TextBlock x:Name="console_txt" TextWrapping="Wrap" Style="{DynamicResource MaterialDesignTitleTextBlock}"></TextBlock>
+                    </ScrollViewer>
+                </Grid>
+            </materialDesign:Card>
+        </Grid>
+        </Grid>
     </Grid>
 </Window>
