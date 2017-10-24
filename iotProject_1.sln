@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2002
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iotProject_1", "iotProject_1\iotProject_1.csproj", "{079FC5BE-D8F3-4F80-9039-EE695999EDBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iotProject_Arduino", "iotProject_Arduino\iotProject_Arduino.csproj", "{F213DA92-EC4B-4D86-A2C9-FAB6DC8A9C9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{079FC5BE-D8F3-4F80-9039-EE695999EDBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{079FC5BE-D8F3-4F80-9039-EE695999EDBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{079FC5BE-D8F3-4F80-9039-EE695999EDBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F213DA92-EC4B-4D86-A2C9-FAB6DC8A9C9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F213DA92-EC4B-4D86-A2C9-FAB6DC8A9C9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F213DA92-EC4B-4D86-A2C9-FAB6DC8A9C9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F213DA92-EC4B-4D86-A2C9-FAB6DC8A9C9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

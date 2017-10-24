@@ -2,7 +2,7 @@
 <html lang="en">
     <?php
     $data_string= "DATABASE STATUS : ...";
-        if (!$link = mysql_connect('localhost', 'root', '')) {
+        if (!$link = mysql_connect('localhost:3306', 'root', '')) {
             $data_string= "DATABASE STATUS : ". mysql_error();
         }
         else{
@@ -17,57 +17,57 @@
                     $sqlstring = "UPDATE `table_led` SET `status` = '1' WHERE `table_led`.`id` = 1";
                     $dataquery = mysql_query($sqlstring, $link);
                 }
-                else if(isset($_POST['led_1_off'])){
+                if(isset($_POST['led_1_off'])){
                     $data_string="DATA STRING : led_1_off";
                     $sqlstring = "UPDATE `table_led` SET `status` = '0' WHERE `table_led`.`id` = 1";
                     $dataquery = mysql_query($sqlstring, $link);
                 }
-                else if(isset($_POST['led_2_onn'])){
+                if(isset($_POST['led_2_onn'])){
                     $data_string= "DATA STRING : led_2_onn";
                     $sqlstring = "UPDATE `table_led` SET `status` = '1' WHERE `table_led`.`id` = 2";
                     $dataquery = mysql_query($sqlstring, $link);
                 }
-                else if(isset($_POST['led_2_off'])){
+                if(isset($_POST['led_2_off'])){
                     $data_string= "DATA STRING : led_2_off";
                     $sqlstring = "UPDATE `table_led` SET `status` = '0' WHERE `table_led`.`id` = 2";
                     $dataquery = mysql_query($sqlstring, $link);
                 }
-                else if(isset($_POST['led_3_onn'])){
+                if(isset($_POST['led_3_onn'])){
                     $data_string= "DATA STRING : led_3_onn";
                     $sqlstring = "UPDATE `table_led` SET `status` = '1' WHERE `table_led`.`id` = 3";
                     $dataquery = mysql_query($sqlstring, $link);
                 }
-                else if(isset($_POST['led_3_off'])){
+                if(isset($_POST['led_3_off'])){
                     $data_string="DATA STRING : led_3_off";
                     $sqlstring = "UPDATE `table_led` SET `status` = '0' WHERE `table_led`.`id` = 3";
                     $dataquery = mysql_query($sqlstring, $link);
                 }
-                else if(isset($_POST['led_4_onn'])){
+                if(isset($_POST['led_4_onn'])){
                     $data_string= "DATA STRING : led_4_onn";
                     $sqlstring = "UPDATE `table_led` SET `status` = '1' WHERE `table_led`.`id` = 4";
                     $dataquery = mysql_query($sqlstring, $link);
                 }
-                else if(isset($_POST['led_4_off'])){
+                if(isset($_POST['led_4_off'])){
                     $data_string="DATA STRING : led_4_off";
                     $sqlstring = "UPDATE `table_led` SET `status` = '0' WHERE `table_led`.`id` = 4";
                     $dataquery = mysql_query($sqlstring, $link);
                 }
-                else if(isset($_POST['led_5_onn'])){
+                if(isset($_POST['led_5_onn'])){
                     $data_string= "DATA STRING : led_5_onn";
                     $sqlstring = "UPDATE `table_led` SET `status` = '1' WHERE `table_led`.`id` = 5";
                     $dataquery = mysql_query($sqlstring, $link);
                 }
-                else if(isset($_POST['led_5_off'])){
+                if(isset($_POST['led_5_off'])){
                     $data_string="DATA STRING : led_5_off";
                     $sqlstring = "UPDATE `table_led` SET `status` = '0' WHERE `table_led`.`id` = 5";
                     $dataquery = mysql_query($sqlstring, $link);
                 }
-                else if(isset($_POST['led_6_onn'])){
+                if(isset($_POST['led_6_onn'])){
                     $data_string= "DATA STRING : led_6_onn";
                     $sqlstring = "UPDATE `table_led` SET `status` = '1' WHERE `table_led`.`id` = 6";
                     $dataquery = mysql_query($sqlstring, $link);
                 }
-                else if(isset($_POST['led_6_off'])){
+                if(isset($_POST['led_6_off'])){
                     $data_string="DATA STRING : led_6_off";
                     $sqlstring = "UPDATE `table_led` SET `status` = '0' WHERE `table_led`.`id` = 6";
                     $dataquery = mysql_query($sqlstring, $link);

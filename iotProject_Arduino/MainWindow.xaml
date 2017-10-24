@@ -1,0 +1,123 @@
+﻿<Window x:Class="iotProject_Arduino.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:iotProject_Arduino"
+        mc:Ignorable="d" Width="786" Height="535" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Title="IOT PROJECT MICORCONTROLLER PANEL"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+    <Grid x:Name="block_grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="5"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="5"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="AUTO"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="AUTO"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="AUTO"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                </Grid.RowDefinitions>
+                <materialDesign:Card Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Center" VerticalAlignment="Center">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="20"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="20"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Column="1" Grid.Row="1" Text="IOT PROJECT _ MICROCONTROLLER CONTROL PANEL" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    </Grid>
+                </materialDesign:Card>
+                <Grid Grid.Column="1" Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="5"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="5"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="5"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="5"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="5"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="5"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="5"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="5"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="5"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Column="1" Grid.Row="1" Text="LED NUMBER ONE STATUS PIN : 6" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    <Button Grid.Column="3" Grid.Row="1" Content="led 1 onn" x:Name="led_1_onn_btn" IsEnabled="False" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                    <Button Grid.Column="5" Grid.Row="1" Content="led 1 off" x:Name="led_1_off_btn" IsEnabled="False" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+
+                    <TextBlock Grid.Column="1" Grid.Row="3" Text="LED NUMBER TWO STATUS PIN : 7" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    <Button Grid.Column="3" Grid.Row="3" Content="led 2 onn" x:Name="led_2_onn_btn" IsEnabled="False" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                    <Button Grid.Column="5" Grid.Row="3" Content="led 2 off" x:Name="led_2_off_btn" IsEnabled="False" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+
+                    <TextBlock Grid.Column="1" Grid.Row="5" Text="LED NUMBER THREE STATUS PIN : 8" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    <Button Grid.Column="3" Grid.Row="5" Content="led 3 onn" x:Name="led_3_onn_btn" IsEnabled="False" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                    <Button Grid.Column="5" Grid.Row="5" Content="led 3 off" x:Name="led_3_off_btn" IsEnabled="False" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+
+                    <TextBlock Grid.Column="1" Grid.Row="7" Text="LED NUMBER FOUR STATUS PIN : 9" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    <Button Grid.Column="3" Grid.Row="7" Content="led 4 onn" x:Name="led_4_onn_btn" IsEnabled="False" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                    <Button Grid.Column="5" Grid.Row="7" Content="led 4 off" x:Name="led_4_off_btn" IsEnabled="False" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+
+                    <TextBlock Grid.Column="1" Grid.Row="9" Text="LED NUMBER FIVE STATUS PIN : 10" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    <Button Grid.Column="3" Grid.Row="9" Content="led 5 onn" x:Name="led_5_onn_btn" IsEnabled="False" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                    <Button Grid.Column="5" Grid.Row="9" Content="led 5 off" x:Name="led_5_off_btn" IsEnabled="False" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+
+                    <TextBlock Grid.Column="1" Grid.Row="11" Text="LED NUMBER SIX STATUS PIN : 11" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    <Button Grid.Column="3" Grid.Row="11" Content="led 6 onn" x:Name="led_6_onn_btn" IsEnabled="False" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                    <Button Grid.Column="5" Grid.Row="11" Content="led 6 off" x:Name="led_6_off_btn" IsEnabled="False" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                </Grid>
+                <materialDesign:Card Grid.Column="1" Grid.Row="5" HorizontalContentAlignment="Center" VerticalAlignment="Center">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="5"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="5"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="5"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <ScrollViewer Grid.Column="1" Grid.Row="1" x:Name="scrl_br" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                            <TextBlock x:Name="console_txt" TextWrapping="Wrap" Style="{DynamicResource MaterialDesignTitleTextBlock}"></TextBlock>
+                        </ScrollViewer>
+                    </Grid>
+                </materialDesign:Card>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
-namespace iotProject_1
+namespace iotProject_Arduino
 {
     internal static class dbHandler
     {
@@ -14,11 +14,9 @@ namespace iotProject_1
             MySqlConnection mySqlConnection = null;
             try
             {
-                String mySqlConnectionString = "Server = " + MainWindow.getIpAddress().Trim() + "; Uid = " + MainWindow.getUid().Trim() + "; Pwd = " + MainWindow.getPassword().Trim() + "; port = 3306; database = iotproject_1";
+                String mySqlConnectionString = "Server = localhost; Uid = root; Pwd = ; port = 3306; database = iotproject_1";
                 mySqlConnection = new MySqlConnection(mySqlConnectionString);
-                MainWindow.setConsoleTXT("trying to open MySql connection");
                 mySqlConnection.Open();
-                MainWindow.setConsoleTXT("MySql Connection has opened");
             }
             catch (Exception ex)
             {
@@ -27,28 +25,29 @@ namespace iotProject_1
             }
             return mySqlConnection;
         }
-        public static void ledStateChanger(int id, int status)
+        public static bool getLedState(int id)
         {
-            MainWindow.setConsoleTXT("id -> " + id.ToString() + " status -> " + status.ToString());
+            bool tempFlag = true;
             using (var tempMySqlConnection = dbHandler.getMySqlConnection())
             {
                 if (tempMySqlConnection != null)
                 {
-                    MainWindow.setConsoleTXT("preparing MySql query command");
                     using (var tempMySqlCommand = tempMySqlConnection.CreateCommand())
                     {
                         tempMySqlCommand.CommandText =
-                            "UPDATE `table_led` SET `status` = @status WHERE `table_led`.`id` = @id";
-                        tempMySqlCommand.Parameters.AddWithValue("@status", status.ToString());
+                            "SELECT table_led.status FROM iotproject_1.table_led WHERE iotproject_1.table_led.id = @id";
                         tempMySqlCommand.Parameters.AddWithValue("@id", id.ToString());
-                        MainWindow.setConsoleTXT("MySql command -> UPDATE `table_led` SET `status` = " +
-                                                 status.ToString() +
-                                                 " WHERE `table_led`.`id` = " + id.ToString());
-                        MainWindow.setConsoleTXT("injecting query command into MySql database");
                         try
                         {
-                            tempMySqlCommand.ExecuteReader();
-                            MainWindow.setConsoleTXT("MySql injection is successful");
+                            using (MySqlDataReader tempDataReader = tempMySqlCommand.ExecuteReader())
+                            {
+                                while (tempDataReader.Read())
+                                {
+                                    tempFlag = (Convert.ToInt32(tempDataReader.GetString("status")) == 1)
+                                                   ? true
+                                                   : false;
+                                }
+                            }
                         }
                         catch (Exception ex)
                         {
@@ -57,12 +56,11 @@ namespace iotProject_1
                         finally
                         {
                             tempMySqlConnection.Close();
-                            MainWindow.setConsoleTXT("MySql has been closed");
                         }
                     }
                 }
             }
+            return tempFlag;
         }
-
     }
 }

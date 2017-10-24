@@ -121,6 +121,35 @@ namespace iotProject_1
             dbHandler.ledStateChanger(6,0);
         }
 
+        public static String getIpAddress()
+        {
+            String tempString = null;
+            using (MainWindow currentMainWindow = Application.Current.MainWindow as MainWindow)
+            {
+                tempString = currentMainWindow.ip_address_txt.Text.ToString();
+            }
+            return tempString;
+        }
+        public static String getUid()
+        {
+            String tempString = null;
+            using (MainWindow currentMainWindow = Application.Current.MainWindow as MainWindow)
+            {
+                tempString = currentMainWindow.uid_txt.Text.ToString();
+            }
+            return tempString;
+        }
+        public static String getPassword()
+        {
+            String tempString = null;
+            using (MainWindow currentMainWindow = Application.Current.MainWindow as MainWindow)
+            {
+                tempString = currentMainWindow.password_txt.Text.ToString();
+
+            }
+            return tempString;
+        }
+
         public static void setConsoleTXT(String txtConsole)
         {
             using (MainWindow currentMainWindow = Application.Current.MainWindow as MainWindow)
