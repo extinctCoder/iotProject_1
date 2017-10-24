@@ -1,34 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
-
-namespace iotProject_Arduino
+﻿namespace iotProject_Arduino
 {
+    using System;
+
+    using MySql.Data.MySqlClient;
+
     internal static class dbHandler
     {
-        public static MySqlConnection getMySqlConnection()
-        {
-            MySqlConnection mySqlConnection = null;
-            try
-            {
-                String mySqlConnectionString = "Server = localhost; Uid = root; Pwd = ; port = 3306; database = iotproject_1";
-                mySqlConnection = new MySqlConnection(mySqlConnectionString);
-                mySqlConnection.Open();
-            }
-            catch (Exception ex)
-            {
-                MainWindow.setConsoleTXT(ex.Message.ToString());
-                mySqlConnection = null;
-            }
-            return mySqlConnection;
-        }
         public static bool getLedState(int id)
         {
             bool tempFlag = true;
-            using (var tempMySqlConnection = dbHandler.getMySqlConnection())
+            using (var tempMySqlConnection = getMySqlConnection())
             {
                 if (tempMySqlConnection != null)
                 {
@@ -60,7 +41,27 @@ namespace iotProject_Arduino
                     }
                 }
             }
+
             return tempFlag;
+        }
+
+        public static MySqlConnection getMySqlConnection()
+        {
+            MySqlConnection mySqlConnection = null;
+            try
+            {
+                string mySqlConnectionString =
+                    "Server = localhost; Uid = root; Pwd = ; port = 3306; database = iotproject_1";
+                mySqlConnection = new MySqlConnection(mySqlConnectionString);
+                mySqlConnection.Open();
+            }
+            catch (Exception ex)
+            {
+                MainWindow.setConsoleTXT(ex.Message.ToString());
+                mySqlConnection = null;
+            }
+
+            return mySqlConnection;
         }
     }
 }

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
-
-namespace iotProject_1
+﻿namespace iotProject_1
 {
+    using System;
+
+    using MySql.Data.MySqlClient;
+
     internal static class dbHandler
     {
         public static MySqlConnection getMySqlConnection()
@@ -14,7 +11,10 @@ namespace iotProject_1
             MySqlConnection mySqlConnection = null;
             try
             {
-                String mySqlConnectionString = "Server = " + MainWindow.getIpAddress().Trim() + "; Uid = " + MainWindow.getUid().Trim() + "; Pwd = " + MainWindow.getPassword().Trim() + "; port = 3306; database = iotproject_1";
+                string mySqlConnectionString = "Server = " + MainWindow.getIpAddress().Trim() + "; Uid = "
+                                               + MainWindow.getUid().Trim() + "; Pwd = "
+                                               + MainWindow.getPassword().Trim()
+                                               + "; port = 3306; database = iotproject_1";
                 mySqlConnection = new MySqlConnection(mySqlConnectionString);
                 MainWindow.setConsoleTXT("trying to open MySql connection");
                 mySqlConnection.Open();
@@ -25,12 +25,14 @@ namespace iotProject_1
                 MainWindow.setConsoleTXT(ex.Message.ToString());
                 mySqlConnection = null;
             }
+
             return mySqlConnection;
         }
+
         public static void ledStateChanger(int id, int status)
         {
             MainWindow.setConsoleTXT("id -> " + id.ToString() + " status -> " + status.ToString());
-            using (var tempMySqlConnection = dbHandler.getMySqlConnection())
+            using (var tempMySqlConnection = getMySqlConnection())
             {
                 if (tempMySqlConnection != null)
                 {
@@ -41,9 +43,9 @@ namespace iotProject_1
                             "UPDATE `table_led` SET `status` = @status WHERE `table_led`.`id` = @id";
                         tempMySqlCommand.Parameters.AddWithValue("@status", status.ToString());
                         tempMySqlCommand.Parameters.AddWithValue("@id", id.ToString());
-                        MainWindow.setConsoleTXT("MySql command -> UPDATE `table_led` SET `status` = " +
-                                                 status.ToString() +
-                                                 " WHERE `table_led`.`id` = " + id.ToString());
+                        MainWindow.setConsoleTXT(
+                            "MySql command -> UPDATE `table_led` SET `status` = " + status.ToString()
+                            + " WHERE `table_led`.`id` = " + id.ToString());
                         MainWindow.setConsoleTXT("injecting query command into MySql database");
                         try
                         {
@@ -63,6 +65,5 @@ namespace iotProject_1
                 }
             }
         }
-
     }
 }
