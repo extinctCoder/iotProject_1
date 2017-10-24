@@ -9,132 +9,132 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="2"></ColumnDefinition>
+            <ColumnDefinition Width="2" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="2"></RowDefinition>
+            <RowDefinition Height="2" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2" />
         </Grid.RowDefinitions>
         <Grid Grid.Column="1" Grid.Row="1">
             <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="2"></ColumnDefinition>
+                <ColumnDefinition Width="2" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="2"></RowDefinition>
-                <RowDefinition Height="AUTO"></RowDefinition>
-                <RowDefinition Height="2"></RowDefinition>
-                <RowDefinition Height="AUTO"></RowDefinition>
-                <RowDefinition Height="2"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="2"></RowDefinition>
-                <RowDefinition Height="AUTO"></RowDefinition>
-                <RowDefinition Height="2"></RowDefinition>
-                </Grid.RowDefinitions>
+                <RowDefinition Height="2" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="2" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="2" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="2" />
+            </Grid.RowDefinitions>
             <materialDesign:Card Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Center" VerticalAlignment="Center">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="2"></ColumnDefinition>
+                        <ColumnDefinition Width="2" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="2"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="2"></RowDefinition>
+                        <RowDefinition Height="2" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="2" />
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Column="1" Grid.Row="1" Text="IOT PROJECT _ LED CONTROL PANEL" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="1" Text="IOT PROJECT _ LED CONTROL PANEL" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 </Grid>
             </materialDesign:Card>
             <Grid Grid.Column="1" Grid.Row="3">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="2"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="2"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="2"></ColumnDefinition>
+                    <ColumnDefinition Width="2" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="2"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="2"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="2"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="2"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="2"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="2"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="2"></RowDefinition>
+                    <RowDefinition Height="2" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="2" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="2" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="2" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="2" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="2" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="2" />
                 </Grid.RowDefinitions>
-                <TextBlock Grid.Column="1" Grid.Row="1" Text="LED NUMBER ONE" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                <Button Grid.Column="3" Grid.Row="1" Content="led 1 onn" x:Name="led_1_onn_btn" Click="Led_1_onn_btn_OnClick" Background="Green" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
-                <Button Grid.Column="5" Grid.Row="1" Content="led 1 off" x:Name="led_1_off_btn" Click="Led_1_off_btn_OnClick" Background="Red" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                <TextBlock Grid.Column="1" Grid.Row="1" Text="LED NUMBER ONE" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Button Grid.Column="3" Grid.Row="1" Content="led 1 onn" x:Name="led_1_onn_btn" Click="Led_1_onn_btn_OnClick" Background="Green" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                <Button Grid.Column="5" Grid.Row="1" Content="led 1 off" x:Name="led_1_off_btn" Click="Led_1_off_btn_OnClick" Background="Red" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
 
-                <TextBlock Grid.Column="1" Grid.Row="3" Text="LED NUMBER TWO" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                <Button Grid.Column="3" Grid.Row="3" Content="led 2 onn" x:Name="led_2_onn_btn" Click="Led_2_onn_btn_OnClick" Background="Green" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
-                <Button Grid.Column="5" Grid.Row="3" Content="led 2 off" x:Name="led_2_off_btn" Click="Led_2_off_btn_OnClick" Background="Red" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                <TextBlock Grid.Column="1" Grid.Row="3" Text="LED NUMBER TWO" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Button Grid.Column="3" Grid.Row="3" Content="led 2 onn" x:Name="led_2_onn_btn" Click="Led_2_onn_btn_OnClick" Background="Green" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                <Button Grid.Column="5" Grid.Row="3" Content="led 2 off" x:Name="led_2_off_btn" Click="Led_2_off_btn_OnClick" Background="Red" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
 
-                <TextBlock Grid.Column="1" Grid.Row="5" Text="LED NUMBER THREE" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                <Button Grid.Column="3" Grid.Row="5" Content="led 3 onn" x:Name="led_3_onn_btn" Click="Led_3_onn_btn_OnClick" Background="Green" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
-                <Button Grid.Column="5" Grid.Row="5" Content="led 3 off" x:Name="led_3_off_btn" Click="Led_3_off_btn_OnClick" Background="Red" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                <TextBlock Grid.Column="1" Grid.Row="5" Text="LED NUMBER THREE" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Button Grid.Column="3" Grid.Row="5" Content="led 3 onn" x:Name="led_3_onn_btn" Click="Led_3_onn_btn_OnClick" Background="Green" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                <Button Grid.Column="5" Grid.Row="5" Content="led 3 off" x:Name="led_3_off_btn" Click="Led_3_off_btn_OnClick" Background="Red" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
 
-                <TextBlock Grid.Column="1" Grid.Row="7" Text="LED NUMBER FOUR" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                <Button Grid.Column="3" Grid.Row="7" Content="led 4 onn" x:Name="led_4_onn_btn" Click="Led_4_onn_btn_OnClick" Background="Green" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
-                <Button Grid.Column="5" Grid.Row="7" Content="led 4 off" x:Name="led_4_off_btn" Click="Led_4_off_btn_OnClick" Background="Red" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                <TextBlock Grid.Column="1" Grid.Row="7" Text="LED NUMBER FOUR" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Button Grid.Column="3" Grid.Row="7" Content="led 4 onn" x:Name="led_4_onn_btn" Click="Led_4_onn_btn_OnClick" Background="Green" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                <Button Grid.Column="5" Grid.Row="7" Content="led 4 off" x:Name="led_4_off_btn" Click="Led_4_off_btn_OnClick" Background="Red" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
 
-                <TextBlock Grid.Column="1" Grid.Row="9" Text="LED NUMBER FIVE" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                <Button Grid.Column="3" Grid.Row="9" Content="led 5 onn" x:Name="led_5_onn_btn" Click="Led_5_onn_btn_OnClick" Background="Green" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
-                <Button Grid.Column="5" Grid.Row="9" Content="led 5 off" x:Name="led_5_off_btn" Click="Led_5_off_btn_OnClick" Background="Red" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                <TextBlock Grid.Column="1" Grid.Row="9" Text="LED NUMBER FIVE" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Button Grid.Column="3" Grid.Row="9" Content="led 5 onn" x:Name="led_5_onn_btn" Click="Led_5_onn_btn_OnClick" Background="Green" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                <Button Grid.Column="5" Grid.Row="9" Content="led 5 off" x:Name="led_5_off_btn" Click="Led_5_off_btn_OnClick" Background="Red" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
 
-                <TextBlock Grid.Column="1" Grid.Row="11" Text="LED NUMBER SIX" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                <Button Grid.Column="3" Grid.Row="11" Content="led 6 onn" x:Name="led_6_onn_btn" Click="Led_6_onn_btn_OnClick" Background="Green" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
-                <Button Grid.Column="5" Grid.Row="11" Content="led 6 off" x:Name="led_6_off_btn" Click="Led_6_off_btn_OnClick" Background="Red" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                <TextBlock Grid.Column="1" Grid.Row="11" Text="LED NUMBER SIX" Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Button Grid.Column="3" Grid.Row="11" Content="led 6 onn" x:Name="led_6_onn_btn" Click="Led_6_onn_btn_OnClick" Background="Green" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                <Button Grid.Column="5" Grid.Row="11" Content="led 6 off" x:Name="led_6_off_btn" Click="Led_6_off_btn_OnClick" Background="Red" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
             </Grid>
             <materialDesign:Card Grid.Column="1" Grid.Row="5" HorizontalContentAlignment="Center" VerticalAlignment="Center">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="2"></ColumnDefinition>
+                        <ColumnDefinition Width="2" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="2"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="2"></RowDefinition>
+                        <RowDefinition Height="2" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="2" />
                     </Grid.RowDefinitions>
                     <ScrollViewer Grid.Column="1" Grid.Row="1" x:Name="scrl_br" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-                        <TextBlock x:Name="console_txt" TextWrapping="Wrap" Style="{DynamicResource MaterialDesignTitleTextBlock}"></TextBlock>
+                        <TextBlock x:Name="console_txt" TextWrapping="Wrap" Style="{DynamicResource MaterialDesignTitleTextBlock}" />
                     </ScrollViewer>
                 </Grid>
             </materialDesign:Card>
                 <Grid Grid.Column="1" Grid.Row="7">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="2"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="2"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="2"></ColumnDefinition>
+                        <ColumnDefinition Width="2" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="2"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="2"></RowDefinition>
+                        <RowDefinition Height="2" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="2" />
                     </Grid.RowDefinitions>
-                    <TextBox Grid.Column="1" Grid.Row="1" x:Name="ip_address_txt" Text="localhost" materialDesign:HintAssist.Hint="IP ADDRESS OF MY SQL SERVER" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"></TextBox>
-                    <TextBox Grid.Column="3" Grid.Row="1" x:Name="uid_txt" Text="root" materialDesign:HintAssist.Hint="USER-NAME OF MY SQL SERVER" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"></TextBox>
-                    <TextBox Grid.Column="5" Grid.Row="1" x:Name="password_txt" Text=" " materialDesign:HintAssist.Hint="PASSWORD OF MY SQL SERVER" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="1" x:Name="ip_address_txt" Text="localhost" materialDesign:HintAssist.Hint="IP ADDRESS OF MY SQL SERVER" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+                    <TextBox Grid.Column="3" Grid.Row="1" x:Name="uid_txt" Text="root" materialDesign:HintAssist.Hint="USER-NAME OF MY SQL SERVER" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+                    <TextBox Grid.Column="5" Grid.Row="1" x:Name="password_txt" Text=" " materialDesign:HintAssist.Hint="PASSWORD OF MY SQL SERVER" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
                 </Grid>
             </Grid>
         </Grid>
