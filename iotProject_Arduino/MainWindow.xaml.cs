@@ -54,13 +54,20 @@
         public MainWindow()
         {
             this.InitializeComponent();
-            this.arduino = new Arduino();
-            this.ledPin_1 = new Led(this.arduino, 6);
-            this.ledPin_2 = new Led(this.arduino, 7);
-            this.ledPin_3 = new Led(this.arduino, 8);
-            this.ledPin_4 = new Led(this.arduino, 9);
-            this.ledPin_5 = new Led(this.arduino, 10);
-            this.ledPin_6 = new Led(this.arduino, 11);
+            try
+            {
+                this.arduino = new Arduino();
+                this.ledPin_1 = new Led(this.arduino, 6);
+                this.ledPin_2 = new Led(this.arduino, 7);
+                this.ledPin_3 = new Led(this.arduino, 8);
+                this.ledPin_4 = new Led(this.arduino, 9);
+                this.ledPin_5 = new Led(this.arduino, 10);
+                this.ledPin_6 = new Led(this.arduino, 11);
+            }
+            catch (Exception ex)
+            {
+                MainWindow.setConsoleTXT(ex.Message.ToString());
+            }
             Thread initThread = new Thread(new ThreadStart(this.updateLedState));
             initThread.IsBackground = true;
             initThread.Start();
@@ -182,54 +189,62 @@
     {
         private void arduinoUploder(int portid, int status)
         {
-            if (portid == 1 && status == 0)
+            try
             {
-                this.ledPin_1.Off();
+                if (portid == 1 && status == 0)
+                {
+                    this.ledPin_1.Off();
+                }
+                else if (portid == 1 && status == 1)
+                {
+                    this.ledPin_1.On();
+                }
+                else if (portid == 2 && status == 0)
+                {
+                    this.ledPin_2.Off();
+                }
+                else if (portid == 2 && status == 1)
+                {
+                    this.ledPin_2.On();
+                }
+                else if (portid == 3 && status == 0)
+                {
+                    this.ledPin_3.Off();
+                }
+                else if (portid == 3 && status == 1)
+                {
+                    this.ledPin_3.On();
+                }
+                else if (portid == 4 && status == 0)
+                {
+                    this.ledPin_4.Off();
+                }
+                else if (portid == 4 && status == 1)
+                {
+                    this.ledPin_4.On();
+                }
+                else if (portid == 5 && status == 0)
+                {
+                    this.ledPin_5.Off();
+                }
+                else if (portid == 5 && status == 1)
+                {
+                    this.ledPin_5.On();
+                }
+                else if (portid == 6 && status == 0)
+                {
+                    this.ledPin_6.Off();
+                }
+                else if (portid == 6 && status == 1)
+                {
+                    this.ledPin_6.On();
+                }
             }
-            else if (portid == 1 && status == 1)
+            catch (Exception ex)
             {
-                this.ledPin_1.On();
+                MainWindow.setConsoleTXT(ex.Message.ToString());
             }
-            else if (portid == 2 && status == 0)
-            {
-                this.ledPin_2.Off();
-            }
-            else if (portid == 2 && status == 1)
-            {
-                this.ledPin_2.On();
-            }
-            else if (portid == 3 && status == 0)
-            {
-                this.ledPin_3.Off();
-            }
-            else if (portid == 3 && status == 1)
-            {
-                this.ledPin_3.On();
-            }
-            else if (portid == 4 && status == 0)
-            {
-                this.ledPin_4.Off();
-            }
-            else if (portid == 4 && status == 1)
-            {
-                this.ledPin_4.On();
-            }
-            else if (portid == 5 && status == 0)
-            {
-                this.ledPin_5.Off();
-            }
-            else if (portid == 5 && status == 1)
-            {
-                this.ledPin_5.On();
-            }
-            else if (portid == 6 && status == 0)
-            {
-                this.ledPin_6.Off();
-            }
-            else if (portid == 6 && status == 1)
-            {
-                this.ledPin_6.On();
-            }
+
         }
 
         private void updateLedState()
